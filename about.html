@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Park Restaurant</title>
+    <meta name="description" content="Experience global street food & vibrant dining at Box Park. Discover diverse restaurants, bars, and events in a unique container-based venue. Dine in or take away. Book your table today!">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/seo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/seo//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/seo//favicon-16x16.png">
+    <link rel="manifest" href="./assets/seo//site.webmanifest">
+    <link rel="stylesheet" href="./styles/box_park.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Lobster&family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Italianno&display=swap"
+        rel="stylesheet">
+        
+        <style>
+            /* Splash Screen Styles */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1s ease-out;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.logo-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Loading Bar */
+.loading-bar {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0%;
+    background: white;
+    border-radius: 2px;
+    animation: loading 2s ease-in-out forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main Content */
+.main-content {
+    min-height: 100vh;
+}
+        </style>
+</head>
+
+<body>
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <img src="./assets/logo.png" width="180px" height="auto" alt="box park logo">
+                </div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden until splash screen disappears) -->
+    <div id="main-content" class="main-content hidden" style="margin-top: 90px">
+        <header>
+            <nav>
+                <div class="side_menu">
+                    <ul>
+                        <li><a href="/home.html">HOME</a></li>
+                        <li><a href="/service_page.html">SERVICES</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="/team_members.html">TEAM</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="/home.html">
+                    <img src="./assets/logo.png" width="120px" height="auto" alt="box park logo">
+                    </a>
+                </div>
+                <div class="user_actions">
+                    <ul>
+                        <li><a href="./about.html" style="color: #A72703">ABOUT US</a></li>
+                        <li><a href="#">ORDER</a></li>
+                        <li><a href="./home.html#contact"><i class="fa-solid fa-user-plus"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a><span id="cart_items">05</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="main_content">
+            <main>
+                <!-- About Section -->
+                <section class="about" id="about">
+                    <div class="container">
+                        <h2 class="section-title">Our Story</h2>
+                        <div class="about-content">
+                            <div class="about-text">
+                                <h3>Welcome to Box Park</h3>
+                                <p>Established in 2010, Box Park has been redefining the culinary scene with our
+                                    innovative approach to traditional dishes. Our chefs combine global techniques with
+                                    locally sourced ingredients to create unforgettable dining experiences.</p>
+                                <p>We believe that food is more than just sustenance - it's an art form that brings
+                                    people together. Our restaurant provides the perfect ambiance for intimate dinners,
+                                    family celebrations, and business gatherings.</p>
+                                <a href="./team_members.html" class="btn"> See our Team</a>
+                            </div>
+                            <div class="about-image">
+                                <img src="./assets/side.avif" alt="Restaurant Interior">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Menu Section -->
+                <section class="menu" id="menu">
+                    <div class="container">
+                        <h2 class="section-title">Our Specialties</h2>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <img src="./assets/1.png" alt="Grilled Salmon">
+                                <div class="menu-item-content">
+                                    <h3>Grilled Atlantic Salmon</h3>
+                                    <p>Fresh salmon fillet grilled to perfection, served with seasonal vegetables and
+                                        lemon butter sauce.</p>
+                                    <p class="price">UGX 15000</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="./assets/2.jpg" alt="Truffle Pasta">
+                                <div class="menu-item-content">
+                                    <h3>Truffle Mushroom Pasta</h3>
+                                    <p>Handmade fettuccine tossed in a creamy truffle sauce with wild mushrooms and
+                                        parmesan.</p>
+                                    <p class="price">UGX 45000/=</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="./assets/4.jpg" alt="Beef Tenderloin">
+                                <div class="menu-item-content">
+                                    <h3>Prime Beef Tenderloin</h3>
+                                    <p>8oz premium beef tenderloin, cooked to your preference, served with roasted
+                                        potatoes and red wine reduction.</p>
+                                    <p class="price">UGX 35000/=</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <footer>
+            <div class="main_footer">
+                <div class="top_footer">
+                    <div class="">
+                        <ul>
+                            <li><i class="fa-brands fa-square-facebook"></i></li>
+                            <li><i class="fa-brands fa-square-x-twitter"></i></li>
+                            <li><i class="fa-brands fa-square-instagram"></i></li>
+                        </ul>
+                        <form action="POST" method="post" id="sign_up">
+                            <p>Sign Up for email list</p>
+                            <div class="">
+                                <input type="text" placeholder="youname@email.com">
+                                <button id="newsletter_submit" type="submit" name="newsletter_submit"><a href="#">
+                                        Subscribe</a></button>
+                                <div class="">
+                                    <button id="unsubscribe" type="submit" name="newsletter_unsubscribe"><a
+                                            href="#">Unsubscribe</a></button>
+                                </div>
+                            </div>
+                            <p style="font-weight: 600; ">By clicking <i>"SUBSCRIBE"</i> I agree to receive news,
+                                promotions, information, and offers from
+                                Box Park.</p>
+                        </form>
+                    </div>
+                    <div class="credits">
+                        <ul>
+                            <li>
+                                <img src="./assets/tripadvisor-logo.png" alt="trip advisor">
+                            </li>
+                            <li>
+                                <img src="./assets/service-logo.png" alt="award winner">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom_footer">
+                    <div class="">
+                        <p>BOX PARK RESTAURANT</p>
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> : 041 728 39192</li>
+                            <li><i class="fa-solid fa-envelope"></i> info@boxpark.com</li>
+                            <li><i class="fa-solid fa-location-pin"></i> Jacaranda rd, </li>
+                            <li><i class="fa-solid fa-signs-post"></i> Plot 700, Akright</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <p>OUR MENU</p>
+                        <ul>
+                            <li>Mains</li>
+                            <li>Breakfast</li>
+                            <li>Desserts</li>
+                            <li>Drinks</li>
+
+                        </ul>
+                    </div>
+                    <div class="">
+                        <p>FEATURED SERVICES</p>
+                        <ul>
+                            <li>Catering</li>
+                            <li>Banquets</li>
+                            <li>Event Hosting</li>
+                            <li>Reservations </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="other_footer">
+                  <p style="text-align: left">
+            Designed by Kisige Erick, Ekyatuhaire Josephine, Kibendo Edrin, Giibwa Joyce Vivian, Nakanwagi Jalia and Ssozi Paul.
+          </p>
+                <ul>
+                    <li><a href="#">Feedback |</a></li>
+                    <li><a href="#">Insights |</a></li>
+                    <li><a href="#">Partners |</a></li>
+                    <li><a href="#">Deliver Agents |</a></li>
+                    <li><a href="#">Terms of Service |</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p>&copy; Box Park. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./scripts/box_park.js"></script>
+</body>
+
+</html>
